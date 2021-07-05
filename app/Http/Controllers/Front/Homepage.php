@@ -14,5 +14,6 @@ class Homepage extends Controller
         $data['articles']=Article::orderBy('created_at','DESC')->get();
         $data['categories']=Category::inRandomOrder()->get();
         return view('front.homepage',$data);
+        //ss
     }
 }
