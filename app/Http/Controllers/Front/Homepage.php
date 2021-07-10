@@ -21,7 +21,7 @@ class Homepage extends Controller
         $article=Article::whereSlug($slug)->whereCategoryId($category->id)->first() ?? abort(403,'Böyle bir yazı bulunamadı.');
         $article->increment('hit');
         $data['article']=$article;
-        $data['categories']=Category::inRandomOrder()->get();
+        $data['categories']=Category::orderBy("name","ASC")->get();
         return view('front.single',$data);
     }
 }
