@@ -22,10 +22,10 @@ class ArticleSeeder extends Seeder
             DB::table('articles')->insert([
                 'category_id'=>rand(1,7),
                 'title'=>$title,
-                'image'=>$faker->imageUrl(800, 400, 'cats', true, 'Faker'),
-                'content'=>$faker->paragraph(15),
+                'image'=>$faker->imageUrl(700, 300, 'cats', true, 'Faker'),
+                'content'=>$faker->paragraph(90),
                 'slug'=>Str::slug($title),
-                'created_at'=>$faker->dateTime('now'),
+                'created_at'=>$faker->dateTimeBetween('-5 days', 'now'),
                 'updated_at'=>now()
             ]);
         }

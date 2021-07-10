@@ -4206,6 +4206,7 @@ textarea.form-control-lg {
 }
 
 .card {
+    background-color: red;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -4219,6 +4220,7 @@ textarea.form-control-lg {
   margin-left: 0;
 }
 .card > .list-group {
+
   border-top: inherit;
   border-bottom: inherit;
 }
