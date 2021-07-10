@@ -5,7 +5,7 @@
     <div class="col-md-9 mx-auto">
         <p><h1 style="font-weight: bold">{{$article->title}}</h1></p>
         <p>
-            {{$article->content}}
+            {{$article->content}}<img src="{{$article->image}}">
         </p>
         <br><br>
         <span style="background-color: #cbccce;" class="text-black-50">Okunma Sayısı : <b>{{$article->hit}}</b> </span>
