@@ -21,7 +21,11 @@
                 <hr/>
             @endif
     @endforeach
+    <div>
+        {{$articles->links()}}
+    </div>
     <!-- Divider-->
     </div>
+
 @include('front.widgets.categoryWidget')
 @endsection

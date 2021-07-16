@@ -11,7 +11,8 @@ use App\Models\Article;
 class Homepage extends Controller
 {
     public function index(){
-        $data['articles']=Article::orderBy('created_at','DESC')->get();
+        $data['articles']=Article::orderBy('created_at','DESC')->paginate(2);//paginate sayfalandırma
+        //Anasayfaya makalaleri gönderir
         $data['categories']=Category::orderBy('name')->get();
         return view('front.homepage',$data);
         //ss
