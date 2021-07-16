@@ -8,7 +8,7 @@
             @foreach($categories as $category)
                 <ul class="category-ul">
                     <li class="category-li">
-                        {{$category->name}} <span style="color: #1a1e21" class="badge float-end">{{$category->articleCount()}}</span>
+                        <a href="{{route('category',$category->slug)}}">{{$category->name}}</a> <span style="color: #1a1e21" class="badge float-end">{{$category->articleCount()}}</span>
                     </li>
                 </ul>
             @endforeach
