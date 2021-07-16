@@ -16,6 +16,7 @@ class Homepage extends Controller
         $data['categories']=Category::orderBy('name')->get();
         return view('front.homepage',$data);
         //ss
+        //sss
     }
     public function single($category,$slug){
         $category= Category::whereSlug($category)->first() ?? abort(403,'Böyle bir kategori bulunamadı');
