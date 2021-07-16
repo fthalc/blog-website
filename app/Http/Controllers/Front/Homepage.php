@@ -28,6 +28,7 @@ class Homepage extends Controller
         $category= Category::whereSlug($slug)->first() ?? abort(403,'Böyle bir kategori bulunamadı');
         $data['category']=$category;
         $data['articles']=Article::where('category_id',$category->id)->orderBy('created_at','DESC')->get();
+        $data['categories']=Category::orderBy('name')->get();
         return view('front.category',$data);
     }
 }

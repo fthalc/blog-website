@@ -15,6 +15,7 @@
                 <p class="post-meta"  >Kategori :
                     <a href="#!">{{$article->getCategory->name}}
                         <span class="float-end">{{$article->created_at->diffForHumans()}}</span>
+                                                                        //diffForHumans -3 gün öce, 5 gün önce
                     </a>
                 </p>
             </div>
@@ -24,7 +25,7 @@
     @endforeach
     @else
         <div class="alert alert-danger">
-            <h1>Bu kategoriye ait yazı bulunamadı</h1>
+            <h2>Bu kategoriye ait yazı bulunamadı</h2>
         </div>
     @endif
     <!-- Divider-->
