@@ -22,11 +22,11 @@
                 <hr/>
             @endif
     @endforeach
-    @endif
     @else
         <div class="alert alert-danger">
             <h1>Bu kategoriye ait yazı bulunamadı</h1>
         </div>
+    @endif
     <!-- Divider-->
     </div>
 @include('front.widgets.categoryWidget')
